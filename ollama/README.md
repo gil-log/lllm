@@ -17,3 +17,18 @@ ollama pull llama3.2
 ollama create modelname -f ./path/to/ModelFile
 ollama run modelname
 ```
+
+# Python
+
+## make virtualenv
+
+```bash
+python3 -m venv example_venv_path
+source example_venv_path/bin/activate
+
+# deactivate
+deactivate
+
+# remove
+rm -rf example_venv_path
+```
