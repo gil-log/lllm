@@ -18,7 +18,8 @@ topic_urls = {
     "News": "http://www.npr.org/rss/rss.php?id=1001",
     "Nvidia": "https://nvidianews.nvidia.com/releases.xml",
     "Raspberry Pi": "https://www.raspberrypi.com/news/feed/", 
-    "Music": "https://www.billboard.com/c/music/music-news/feed/"
+    "Music": "https://www.billboard.com/c/music/music-news/feed/",
+    "NasdaqETF" : "https://www.nasdaq.com/feed/rssoutbound?category=ETFs",
 }
 
 # Use curses to create a menu of topics
@@ -75,7 +76,7 @@ def getArticleText(url):
   return article.text
 
 def get_summary(text):
-  systemPrompt = "Write a concise summary of the text, return your responses with 5 lines that cover the key points of the text given."
+  systemPrompt = "Write a concise summary of the text, return your responses with 5 lines that cover the key points of the text given. Responses must be output in Korean"
   prompt = text
   
   url = "http://localhost:11434/api/generate"
